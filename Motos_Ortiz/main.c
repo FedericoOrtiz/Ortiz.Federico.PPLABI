@@ -9,34 +9,33 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "marca.h"
 #include "tipo.h"
 #include "color.h"
 #include "servicio.h"
 #include "moto.h"
+#include "trabajo.h"
 #include "Gets.h"
 
 #define TAM_TIPOS 4
 #define TAM_COLORES 5
 #define TAM_SERVICIOS 4
-#define TAM_MARCAS 5
 #define TAM_MOTOS 1000
+#define TAM_TRABAJOS 1000
 
 
 int main()
 {
-    eMarca listaMarcas[TAM_MARCAS];
     eTipo listaTipos[TAM_TIPOS];
     eColor listaColores[TAM_COLORES];
     eMoto listaMotos[TAM_MOTOS];
     eServicio listaServicios[TAM_SERVICIOS];
+    eTrabajo listaTrabajos[TAM_TRABAJOS];
 
-    hardcodearMarcas(listaMarcas, TAM_MARCAS);
     hardcodearTipos(listaTipos, TAM_TIPOS);
     hardcodearColores(listaColores, TAM_COLORES);
     hardcodearServicios(listaServicios, TAM_SERVICIOS);
 
-    if(!inicializarMotos(listaMotos, TAM_MOTOS))
+    if(!inicializarMotos(listaMotos, TAM_MOTOS) && !(inicializarTrabajos(listaTrabajos, TAM_TRABAJOS)))
     {
         printf("Iniciacion exitosa\n\n");
     }
@@ -52,6 +51,7 @@ int main()
     int proximoIdMotos = 30000;
     int proximoIdTrabajos = 40000;
     int cantMotos = 0;
+    int cantTrabajos = 0;
     char salir = 'n';
 
     do
@@ -73,9 +73,9 @@ int main()
         switch(opcion)
         {
             case 1:
-                if(altaMoto(listaMotos, TAM_MOTOS, proximoIdMotos, listaTipos, TAM_TIPOS, listaColores, TAM_COLORES, listaMarcas, TAM_MARCAS) == 0)
+                if(altaMoto(listaMotos, TAM_MOTOS, proximoIdMotos, listaTipos, TAM_TIPOS, listaColores, TAM_COLORES) == 0)
                 {
-                    printf("Alta exitosa\n\n");
+                    printf("\nAlta exitosa\n\n");
                     proximoIdMotos++;
                     cantMotos++;
                 }
@@ -86,22 +86,75 @@ int main()
                 break;
 
             case 2:
-
+                if(cantMotos > 0)
+                {
+                    modificarMoto(listaMotos, TAM_MOTOS, listaColores, TAM_COLORES, listaTipos, TAM_TIPOS);
+                }
+                else
+                {
+                    printf("\nPrimero debe realizar la carga de una moto\n\n");
+                }
                 break;
             case 3:
+                if(cantMotos>0)
+                {
+                    if(!eliminarMoto(listaMotos, TAM_MOTOS, listaColores, TAM_COLORES, listaTipos, TAM_TIPOS))
+                    {
+                        cantMotos--;
+                    }
+                }
+                else
+                {
+                    printf("\nPrimero debe realizar la carga de una moto\n\n");
+                }
                 break;
             case 4:
-                mostrarMotos(listaMotos, TAM_MOTOS, listaColores, TAM_COLORES, listaTipos, TAM_TIPOS);
+                if(cantMotos>0)
+                {
+                    mostrarMotos(listaMotos, TAM_MOTOS, listaColores, TAM_COLORES, listaTipos, TAM_TIPOS);
+                }
+                else
+                {
+                    printf("\nPrimero debe realizar la carga de una moto\n\n");
+                }
                 break;
             case 5:
+                mostrarTipos(listaTipos, TAM_TIPOS);
                 break;
             case 6:
+                mostrarColores(listaColores, TAM_COLORES);
                 break;
             case 7:
+                mostrarServicios(listaServicios, TAM_SERVICIOS);
                 break;
             case 8:
+                if(cantMotos>0)
+                {
+                    if(!altaTrabajo(listaTrabajos, TAM_TRABAJOS, proximoIdTrabajos, listaMotos, TAM_MOTOS, listaColores, TAM_COLORES, listaTipos, TAM_TIPOS, listaServicios, TAM_SERVICIOS))
+                    {
+                        printf("\nAlta exitosa\n\n");
+                        proximoIdTrabajos++;
+                        cantTrabajos++;
+                    }
+                    else
+                    {
+                        printf("No hay lugar\n\n");
+                    }
+                }
+                else
+                {
+                    printf("\nPrimero debe realizar la carga de una moto\n\n");
+                }
                 break;
             case 9:
+                if(cantTrabajos>0)
+                {
+                    mostrarTrabajos(listaTrabajos, TAM_TRABAJOS, listaMotos, TAM_MOTOS, listaColores, TAM_COLORES, listaTipos, TAM_TIPOS, listaServicios, TAM_SERVICIOS);
+                }
+                else
+                {
+                   printf("\nPrimero debe realizar la carga de un trabajo\n\n");
+                }
                 break;
             case 10:
                 salir = getChar("Confirma salida (s/n): ");

@@ -9,4 +9,7 @@ typedef struct
 }eServicio;
 
 void hardcodearServicios(eServicio listaServicios[], int tam);
+void mostrarServicio(eServicio servicio);
+void mostrarServicios(eServicio listaServicios[], int tam);
+
 #endif // SERVICIO_H_INCLUDED

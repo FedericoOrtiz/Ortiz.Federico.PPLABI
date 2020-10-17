@@ -1,19 +1,19 @@
 # depslib dependency file v1.0
-1602686163 source:c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\main.c
+1602899029 source:c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\main.c
 	<stdio.h>
 	<stdlib.h>
-	"marca.h"
 	"tipo.h"
 	"color.h"
 	"servicio.h"
 	"moto.h"
+	"trabajo.h"
 	"Gets.h"
 
 1602682142 c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\tipo.h
 
 1602681905 c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\color.h
 
-1602686572 source:c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\color.c
+1602719323 source:c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\color.c
 	"color.h"
 	<stdio.h>
 	<stdlib.h>
@@ -28,27 +28,26 @@
 
 1601605619 c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\gets.h
 
-1602678352 c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\servicio.h
+1602893319 c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\servicio.h
 
-1602686016 c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\moto.h
+1602894527 c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\moto.h
 	"tipo.h"
 	"color.h"
-	"marca.h"
 
-1602686954 source:c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\moto.c
+1602898372 source:c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\moto.c
 	<stdio.h>
 	<stdlib.h>
 	"moto.h"
 	"Gets.h"
 	<string.h>
 
-1602686539 source:c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\servicio.c
+1602899494 source:c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\servicio.c
 	"servicio.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1602686519 source:c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\tipo.c
+1602719324 source:c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\tipo.c
 	"tipo.h"
 	<stdio.h>
 	<stdlib.h>
@@ -61,4 +60,18 @@
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+
+1602898982 c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\trabajo.h
+	"fecha.h"
+	"moto.h"
+	"tipo.h"
+	"color.h"
+	"servicio.h"
+
+1602676689 c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\fecha.h
+
+1602899043 source:c:\users\feder\desktop\2do cuatrimestre 2020\programación-laboratorio i\1er parcial\ortiz.federico.pplabi\motos_ortiz\trabajo.c
+	"trabajo.h"
+	<stdio.h>
+	<stdlib.h>
 

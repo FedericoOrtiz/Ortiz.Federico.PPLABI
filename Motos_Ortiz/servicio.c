@@ -16,3 +16,21 @@ void hardcodearServicios(eServicio listaServicios[], int tam)
         listaServicios[i].precio = precios[i];
     }
 }
+
+void mostrarServicio(eServicio servicio)
+{
+    printf("%5d %13s %8d\n", servicio.id, servicio.descripcion, servicio.precio);
+}
+
+void mostrarServicios(eServicio listaServicios[], int tam)
+{
+    if(listaServicios != NULL && tam > 0)
+    {
+        printf("\n   ID   DESCRIPCION   PRECIO\n\n");
+        for(int i=0; i<tam; i++)
+        {
+            mostrarServicio(listaServicios[i]);
+        }
+        printf("\n");
+    }
+}

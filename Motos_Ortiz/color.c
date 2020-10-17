@@ -24,7 +24,7 @@ void mostrarColores(eColor listadoColores[], int tam)
 {
     if(listadoColores != NULL && tam>0)
     {
-        printf("   ID   COLOR\n\n");
+        printf("\n   ID    COLOR\n\n");
         for(int i=0; i<tam; i++)
         {
             mostrarColor(listadoColores[i]);

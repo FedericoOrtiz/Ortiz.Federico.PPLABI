@@ -2,7 +2,6 @@
 #define MOTO_H_INCLUDED
 #include "tipo.h"
 #include "color.h"
-#include "marca.h"
 
 
 typedef struct
@@ -16,14 +15,13 @@ typedef struct
 }eMoto;
 
 int inicializarMotos(eMoto listaMotos[], int tam);
-int buscarLibre(eMoto listaMotos[], int tam);
-int altaMoto(eMoto listaMotos[], int tamMotos, int id, eTipo listaTipos[], int tamTipos, eColor listaColores[], int tamColores, eMarca listaMarcas[], int tamMarcas);
+int buscarLibreMoto(eMoto listaMotos[], int tam);
+int altaMoto(eMoto listaMotos[], int tamMotos, int id, eTipo listaTipos[], int tamTipos, eColor listaColores[], int tamColores);
 void mostrarMoto(eMoto moto, eColor listaColores[], int tamColores, eTipo listaTipos[], int tamTipos);
 void mostrarMotos(eMoto listaMotos[], int tamMotos, eColor listaColores[], int tamColores, eTipo listaTipos[], int tamTipos);
-int buscarMotoPorId(eMoto listaMotos[], int tam);
-int modificarMoto(eMoto listaMotos[], int tam);
-
-
+int buscarMotoPorId(eMoto listaMotos[], int tamMotos, int id, eColor listaColores[], int tamColores, eTipo listaTipos[], int tamTipos);
+void modificarMoto(eMoto listaMotos[], int tamMotos, eColor listaColores[], int tamColores, eTipo listaTipos[], int tamTipos);
+int eliminarMoto(eMoto listaMotos[], int tamMotos, eColor listaColores[], int tamColores, eTipo listaTipos[], int tamTipos);
 
 
 
